@@ -128,4 +128,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  # Additional options post-installation are below. Once I better understand
+  # Nix, I might reoganize this entire file but for now, I am simply putting
+  # everything at the bottom.
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
