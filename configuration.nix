@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-b192e13e-bebb-45ba-a82b-af659fcc23fc".device = "/dev/disk/by-uuid/b192e13e-bebb-45ba-a82b-af659fcc23fc";
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "t480s"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
