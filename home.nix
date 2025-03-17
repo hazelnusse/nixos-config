@@ -34,6 +34,12 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+
+    pkgs.bash
+    pkgs.git
+    pkgs.neovim
+    pkgs.htop
+    pkgs.tree
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -68,9 +74,25 @@
   #  /etc/profiles/per-user/luke/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
+  };
+
+  home.shellAliases = {
+    g = "git";
+    v = "nvim";
+    h = "htop";
+    t = "tree";
+    bzlsk = "bazelisk";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "Luke Peterson";
+    userEmail = "hazelnusse@gmail.com";
+  };
+
+  programs.bash.enable = true;
 }
