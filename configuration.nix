@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -87,6 +88,14 @@
     #  thunderbird
     ];
   };
+
+  home-manager = {
+  # also pass inputs to home-manager modules
+  extraSpecialArgs = { inherit inputs; };
+  users = {
+    "luke" = import ./home.nix;
+  };
+};
 
   # Install firefox.
   programs.firefox.enable = true;
