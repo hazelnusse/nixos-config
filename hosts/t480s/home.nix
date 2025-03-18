@@ -35,11 +35,13 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
-    pkgs.bash
     pkgs.git
     pkgs.neovim
     pkgs.htop
     pkgs.tree
+    pkgs.tmux
+    pkgs.zsh
+    pkgs.oh-my-zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -90,9 +92,19 @@
 
   programs.git = {
     enable = true;
-    userName = "Luke Peterson";
-    userEmail = "hazelnusse@gmail.com";
+    extraConfig = {
+      user.name = "Luke Peterson";
+      user.email = "hazelnusse@gmail.com";
+      init.defaultBranch = "main";
+    };
   };
 
-  programs.bash.enable = true;
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ ];
+      theme = "agnoster";
+    };
+  };
 }
