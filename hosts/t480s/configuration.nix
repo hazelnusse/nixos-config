@@ -141,4 +141,14 @@
   # Nix, I might reoganize this entire file but for now, I am simply putting
   # everything at the bottom.
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Automatic updating
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.dates = "weekly";
+
+  # Automatic garbage collection
+  nix.gc.automatic = true;
+  nix.gc.dates = "weekly";
+  nix.gc.options = "--delete-older-than 30d";
+  nix.settings.auto-optimise-store = true;
 }
