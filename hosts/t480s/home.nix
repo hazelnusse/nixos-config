@@ -36,12 +36,13 @@
     # '')
 
     pkgs.git
-    pkgs.neovim
     pkgs.htop
-    pkgs.tree
+    pkgs.neovim
+    pkgs.starship
+    pkgs.telegram-desktop
     pkgs.tmux
+    pkgs.tree
     pkgs.zsh
-    pkgs.oh-my-zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -101,10 +102,11 @@
 
   programs.zsh = {
     enable = true;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ ];
-      theme = "agnoster";
-    };
+    defaultKeymap = "viins";
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }
