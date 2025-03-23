@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    pkgs.bitwarden-desktop
     pkgs.fzf
     pkgs.git
     pkgs.htop
