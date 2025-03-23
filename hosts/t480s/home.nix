@@ -38,6 +38,7 @@
     pkgs.git
     pkgs.htop
     pkgs.neovim
+    pkgs.ripgrep
     pkgs.starship
     pkgs.telegram-desktop
     pkgs.tmux
@@ -85,7 +86,6 @@
     v = "nvim";
     h = "htop";
     t = "tree";
-    bzlsk = "bazelisk";
   };
 
   # Let Home Manager install and manage itself.
