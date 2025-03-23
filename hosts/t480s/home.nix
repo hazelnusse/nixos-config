@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    pkgs.fzf
     pkgs.git
     pkgs.htop
     pkgs.neovim
@@ -90,6 +91,10 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.fzf = {
+    enable = true;
+  };
 
   programs.git = {
     enable = true;
