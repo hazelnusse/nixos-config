@@ -36,8 +36,10 @@
     # '')
 
     pkgs.bitwarden-desktop
+    pkgs.ffmpeg
     pkgs.fzf
     pkgs.git
+    pkgs.gifski
     pkgs.htop
     pkgs.neovim
     pkgs.ripgrep
