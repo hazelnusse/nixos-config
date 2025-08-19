@@ -36,6 +36,7 @@
     # '')
 
     pkgs.bitwarden-desktop
+    pkgs.google-chrome
     pkgs.ffmpeg
     pkgs.fzf
     pkgs.git
