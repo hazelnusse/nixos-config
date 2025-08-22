@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    pkgs.alacritty
     pkgs.bitwarden-desktop
     pkgs.google-chrome
     pkgs.ffmpeg
