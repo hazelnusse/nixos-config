@@ -37,6 +37,7 @@
 
     pkgs.alacritty
     pkgs.bitwarden-desktop
+    pkgs.discord
     pkgs.google-chrome
     pkgs.ffmpeg
     pkgs.fzf
