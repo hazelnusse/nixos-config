@@ -47,6 +47,7 @@
     pkgs.neovim
     pkgs.ripgrep
     pkgs.starship
+    pkgs.sqlite
     pkgs.telegram-desktop
     pkgs.tmux
     pkgs.tree
