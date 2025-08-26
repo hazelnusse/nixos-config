@@ -41,6 +41,7 @@
     pkgs.google-chrome
     pkgs.ffmpeg
     pkgs.fzf
+    pkgs.gh
     pkgs.git
     pkgs.gifski
     pkgs.htop
@@ -51,6 +52,9 @@
     pkgs.telegram-desktop
     pkgs.tmux
     pkgs.tree
+    pkgs.unzip
+    pkgs.wget
+    pkgs.zip
     pkgs.zsh
   ];
 
