@@ -48,6 +48,9 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  # I don't know why, but this doesn't work in the programs section of home.nix
+  programs.nix-ld.enable = true;
+
   # rtkit is needed with pipewire.
   security.rtkit.enable = true;
 

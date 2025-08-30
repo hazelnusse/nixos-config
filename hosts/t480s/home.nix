@@ -98,6 +98,7 @@
     home-manager.enable = true;
     fzf.enable = true;
     firefox.enable = true;
+
     git = {
       enable = true;
       extraConfig = {
@@ -106,10 +107,12 @@
         init.defaultBranch = "main";
       };
     };
+
     starship = {
       enable = true;
       enableZshIntegration = true;
     };
+
     zsh = {
       enable = true;
       defaultKeymap = "viins";
