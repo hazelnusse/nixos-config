@@ -6,7 +6,7 @@
     homeDirectory = "/home/luke";
     # Do not change.
     stateVersion = "24.11";
-    packages = [
+    packages = with pkgs; [
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.
       # pkgs.hello
@@ -23,32 +23,32 @@
       # (pkgs.writeShellScriptBin "my-hello" ''
       #   echo "Hello, ${config.home.username}!"
       # '')
-      pkgs.alacritty
-      pkgs.bazelisk
-      pkgs.bitwarden-desktop
-      pkgs.discord
-      pkgs.element-desktop
-      pkgs.ffmpeg
-      pkgs.fzf
-      pkgs.gh
-      pkgs.ghc
-      pkgs.gifski
-      pkgs.git
-      pkgs.google-chrome
-      pkgs.htop
-      pkgs.neovim
-      pkgs.nixfmt-rfc-style
-      pkgs.ripgrep
-      pkgs.starship
-      pkgs.sqlite
-      pkgs.telegram-desktop
-      pkgs.tmux
-      pkgs.tree
-      pkgs.unzip
-      pkgs.virtualbox
-      pkgs.wget
-      pkgs.zip
-      pkgs.zsh
+      alacritty
+      bazelisk
+      bitwarden-desktop
+      discord
+      element-desktop
+      ffmpeg
+      fzf
+      gh
+      ghc
+      gifski
+      git
+      google-chrome
+      htop
+      neovim
+      nixfmt-rfc-style
+      ripgrep
+      starship
+      sqlite
+      telegram-desktop
+      tmux
+      tree
+      unzip
+      virtualbox
+      wget
+      zip
+      zsh
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -97,6 +97,7 @@
   programs = {
     home-manager.enable = true;
     fzf.enable = true;
+    firefox.enable = true;
     git = {
       enable = true;
       extraConfig = {
