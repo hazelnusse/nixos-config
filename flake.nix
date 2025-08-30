@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "Luke's NixOS configuration flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,14 +11,21 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
-    # use "nixos", or your hostname as the name of the configuration
-    # it's a better practice than "default" shown in the video
+    # Name each attribute in nixosConfigurations to match machine hostnames.
+    # This configuration can be explicitly referenced when upgrading with:
+    #
+    #   $ nixos-rebuild switch --flake .#hostname
+    #
+    # If the machine hostname where the above command is run matches a name in
+    # nixosConfigurations, it will be selected and `#hostname` can be ommitted.
+    # So, on the t480s machine, the above can be:
+    #
+    #   $ nixos-rebuild switch --flake .
     nixosConfigurations = {
       t480s = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/t480s/configuration.nix
-          inputs.home-manager.nixosModules.default
         ];
       };
     };
